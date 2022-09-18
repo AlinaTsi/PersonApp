@@ -1,0 +1,23 @@
+﻿@model Person
+
+<form method="post">
+    <h2 class="text-primary">Create Person</h2>
+    <label asp-for="FirstName"></label>
+    <input asp-for="FirstName" class="form-control"></input>
+    <span asp-validation-for="FirstName" class="text-danger"></span>
+    <br />
+    <label asp-for="LastName"></label>
+    <input asp-for="LastName" class="form-control"></input>
+    <span asp-validation-for="LastName" class="text-danger"></span>
+    <br/>
+    <button type="submit" class="btn btn-primary" style="width:150px">Create</button>
+    <a asp-controller="Person" asp-action="Index" class="btn btn-secondary" style="width:150px">Back To List</a>
+</form>
+
+
+@section Scripts
+{
+    @{
+<partial name="_ValidationScriptsPartial"/>
+    }
+}

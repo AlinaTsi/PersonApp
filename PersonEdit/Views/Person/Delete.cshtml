@@ -1,0 +1,21 @@
+﻿@model Person
+
+<form method="post" asp-action="Delete">
+    <h2 class="text-primary">Delete Person</h2>
+    <label asp-for="FirstName"></label>
+    <input asp-for="FirstName" disabled class="form-control"></input>
+    <br />
+    <label asp-for="LastName"></label>
+    <input asp-for="LastName" disabled class="form-control"></input>
+    <br/>
+    <button type="submit" class="btn btn-primary" style="width:150px">Delete</button>
+    <a asp-controller="Person" asp-action="Index" class="btn btn-secondary" style="width:150px">Back To List</a>
+</form>
+
+
+@section Scripts
+{
+    @{
+<partial name="_ValidationScriptsPartial"/>
+    }
+}
